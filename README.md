@@ -24,8 +24,10 @@
 
 <br/>
 2. When product is added to the system, the ProductAddedEvent, is externalized to the RabbitMQ. So, Command service acts as producer of events to the queue.
+
 ![ScreenShot](https://github.com/SuperMohit/product-microservice-cqrs/blob/master/event-stream.png)
 
 <br/>
 3.  The events are further consumed by Query Service.
+
 ![ScreenShot](https://github.com/SuperMohit/product-microservice-cqrs/blob/master/query.png)
