@@ -1,4 +1,4 @@
-package com.sapient.api;
+package com.mohit.api;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -9,7 +9,7 @@ import org.axonframework.eventhandling.EventHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sapient.product.events.ProductAddedEvent;
+import com.mohit.product.events.ProductAddedEvent;
 
 @RestController
 @ProcessingGroup("productEvents")

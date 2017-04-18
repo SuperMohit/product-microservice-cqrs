@@ -1,4 +1,4 @@
-package com.sapient;
+package com.mohit;
 
 import org.axonframework.amqp.eventhandling.DefaultAMQPMessageConverter;
 import org.axonframework.amqp.eventhandling.spring.SpringAMQPMessageSource;

@@ -1,4 +1,4 @@
-package com.sapient.product.events;
+package com.mohit.product.events;
 
 public class ProductAddedEvent extends AbstractEvent {
 

@@ -1,4 +1,4 @@
-package com.sapient.product.events;
+package com.mohit.product.events;
 
 import java.io.Serializable;
 
