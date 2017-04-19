@@ -26,7 +26,9 @@ public class ProductQueryAPI {
 	public ConcurrentMap<String, AtomicLong> getData() {
 		return data;
 	}
-
-	
+   
+	public ConcurrentMap<String, AtomicLong> getProducts(){
+		return data;
+	}
 
 }
