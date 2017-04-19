@@ -12,7 +12,8 @@
 10. Spring Boot Actuator is added to the path, which provides custom end points for service health information etc.
 11. Further monitoring can be enabled using tracing etc by Zipkin etc.
 12. Swagger can be used for API documentation.
-13. There are no test cases.
+13. Product Query microservice includes a sample Integration Test.
+14. A sample for Global exception handling is availbale in the pacakages.
 
 
 ## Project Workflow:
