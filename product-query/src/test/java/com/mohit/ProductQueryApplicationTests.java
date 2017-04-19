@@ -33,7 +33,7 @@ public class ProductQueryApplicationTests {
 
 	@Before
 	public void setProductCatalog() {
-		productCatalog = productQueryAPI.getData();
+		
 		productCatalog.put("Product1", new AtomicLong(1000));
 	}
 
