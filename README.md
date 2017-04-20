@@ -21,7 +21,6 @@
 
 1. Add Product to the system using  rest client(Postman) or using Swagger. Notice the endpoints. Request is made to API Gateway routed to command services name registered with Eureka Server.  
 
-![ScreenShot](https://github.com/SuperMohit/product-microservice-cqrs/blob/master/restclient.png)
 
 <br/>
 2. When product is added to the system, the ProductAddedEvent, is externalized to the RabbitMQ. So, Command service acts as producer of events to the queue.
