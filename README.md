@@ -11,7 +11,7 @@
 9. H2db is used as in memory db for storing events and domain models.
 10. Spring Boot Actuator is added to the path, which provides custom end points for service health information etc.
 11. Further monitoring can be enabled using tracing etc by Zipkin etc.
-12. Swagger can be used for API documentation.
+12. Swagger is used in Product Command and Product Query for API documentation.
 13. Product Query microservice includes a sample Integration Test.
 14. A sample for Global exception handling is availbale in the pacakages.
 
@@ -19,7 +19,7 @@
 ## Project Workflow:
 <br/>
 
-1. Add Product to the system using  rest client(Postman). Notice the endpoints. Request is made to API Gateway routed to command services name registered with Eureka Server.  
+1. Add Product to the system using  rest client(Postman) or using Swagger. Notice the endpoints. Request is made to API Gateway routed to command services name registered with Eureka Server.  
 
 ![ScreenShot](https://github.com/SuperMohit/product-microservice-cqrs/blob/master/restclient.png)
 
