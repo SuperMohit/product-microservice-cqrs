@@ -32,3 +32,50 @@
 3.  The events are further consumed by Query Service.
 
 ![ScreenShot](https://github.com/SuperMohit/product-microservice-cqrs/blob/master/query.png)
+
+
+## Containerization using Docker
+1. Create a DockerFile in src/main/docker with following entry.
+FROM frolvlad/alpine-oraclejdk8:slim
+VOLUME /tmp
+ADD product-query-0.0.1-SNAPSHOT.jar product-query.jar
+RUN sh -c 'touch /product-query.jar'
+ENV JAVA_OPTS=""
+ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /product-query.jar" ]
+
+2. Add Spotify docker plugin for building the docker image through maven.
+
+<properties>
+   <docker.image.prefix>springio</docker.image.prefix>
+</properties>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>0.4.11</version>
+            <configuration>
+                <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                <dockerDirectory>src/main/docker</dockerDirectory>
+                <resources>
+                    <resource>
+                        <targetPath>/</targetPath>
+                        <directory>${project.build.directory}</directory>
+                        <include>${project.build.finalName}.jar</include>
+                    </resource>
+                </resources>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+3.  Build a docker image using follwoing command
+    mvn package docker:build
+    
+4.  Execute the docker image 
+    docker run -p 8180:8180 -t springio/product-query
+
+
+
+
+
