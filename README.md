@@ -14,7 +14,7 @@
 12. Swagger is used in Product Command and Product Query for API documentation.
 13. Product Query microservice includes a sample Integration Test.
 14. A sample for Global exception handling is availbale in the pacakages.
-
+15. Environment is created using Docker
 
 ## Project Workflow:
 <br/>
